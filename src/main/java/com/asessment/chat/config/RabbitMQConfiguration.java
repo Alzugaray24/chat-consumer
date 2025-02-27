@@ -7,7 +7,7 @@ import org.springframework.context.annotation.*;
 @Configuration
 public class RabbitMQConfiguration {
 
-    private final String QUEUE_NAME = "chat-queue";
+    private final String QUEUE_NAME = "chat_queue";
 
     @Bean
     public Queue queue() {

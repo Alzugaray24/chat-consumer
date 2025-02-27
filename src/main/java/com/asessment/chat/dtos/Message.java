@@ -13,14 +13,12 @@ import java.time.LocalDateTime;
 public class Message {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
 
-    private LocalDateTime date;
-    private String content;
-    private String status;
+    private LocalDateTime shippingDate;
+    private String text;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "userId", nullable = false)
     private User user;
 }

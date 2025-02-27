@@ -3,7 +3,9 @@ package com.asessment.chat.services;
 import com.asessment.chat.dtos.User;
 import com.asessment.chat.repositories.UserRepository;
 import jakarta.transaction.Transactional;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserService {
 
     private UserRepository userRepository;

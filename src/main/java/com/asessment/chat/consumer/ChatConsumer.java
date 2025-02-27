@@ -1,6 +1,5 @@
 package com.asessment.chat.consumer;
 
-import com.asessment.chat.dtos.Message;
 import com.asessment.chat.dtos.User;
 import com.asessment.chat.services.UserService;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -15,7 +14,7 @@ public class ChatConsumer {
         this.userService = userService;
     }
 
-    @RabbitListener(queues = "chat-queue")
+    @RabbitListener(queues = "chat_queue")
     public void receiveMessage(User user) {
         System.out.println("Received message: " + user);
         userService.saveUser(user);
